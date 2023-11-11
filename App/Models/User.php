@@ -9,13 +9,6 @@ class User extends Model
 
     // public static $table = "users";
 
-    // public static $name = "gg";
-    public $id;
-    public $name;
-    public $username;
-    public $created_at;
-    public $password;
-
    
 
     public function posts()

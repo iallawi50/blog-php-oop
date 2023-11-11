@@ -9,8 +9,15 @@ use App\Core\Request;
 use App\Core\Route;
 
 Route::make()
+->get("", [PostController::class, "index"])
+// Authentication
+->get("register", [AuthController::class, "register"], "guest")
+->post("register", [AuthController::class, "store"], "guest")
+->get("login", [AuthController::class, "login"], "guest")
+->post("login", [AuthController::class, "authentication"], "guest")
+->post("logout", [AuthController::class, "logout"], "auth")
+
     // Posts
-    ->get("", [PostController::class, "index"])
     ->get("posts/show", [PostController::class, "show"])
     ->get("posts/create", [PostController::class, "create"], "auth")
     ->post("posts/create", [PostController::class, "store"], "auth")
@@ -23,12 +30,6 @@ Route::make()
     ->post("comments/delete", [CommentController::class, "delete"], "auth")
 
 
-    // Authentication
-    ->get("register", [AuthController::class, "register"], "guest")
-    ->post("register", [AuthController::class, "store"], "guest")
-    ->get("login", [AuthController::class, "login"], "guest")
-    ->post("login", [AuthController::class, "authentication"], "guest")
-    ->post("logout", [AuthController::class, "logout"], "auth")
 
 
 
