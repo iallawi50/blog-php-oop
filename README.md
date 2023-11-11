@@ -83,27 +83,26 @@ CREATE TABLE `comments` (
 
 | Method                                             | Path | Action               | Middleware |
 | -------------------------------------------------- | ---- | -------------------- | ---------- |
-| <span align=center style="color: green">GET</span> | /    | PostController@index |
-
+| GET| /    | PostController@index |
 |
 |
-<span align=center style="color: green">GET</span> | register | AuthController@register | guest
-<span align=center style="color: blue">POST</span> | register | AuthController@store | guest
-<span align=center style="color: green">GET</span> | login | AuthController@login | guest
-<span align=center style="color: blue">POST</span> | login | AuthController@authentication | guest
-<span align=center style="color: blue">POST</span> | logout | AuthController@logout | auth
+GET| register | AuthController@register | guest
+POST| register | AuthController@store | guest
+GET| login | AuthController@login | guest
+POST| login | AuthController@authentication | guest
+POST| logout | AuthController@logout | auth
 |
 |
-<span align=center style="color: green">GET</span>| posts/show | PostController@show |
-<span align=center style="color: green">GET</span> | posts/create | PostController@create | auth
-<span align=center style="color: blue">POST</span> | posts/create | PostController@edit | auth
-<span align=center style="color: green">GET</span> | posts/edit | PostController@update | auth
-<span align=center style="color: blue">POST</span> | posts/edit | PostController@store | auth
-<span align=center style="color: blue">POST</span> | posts/delete | PostController@delete | auth
+GET| posts/show | PostController@show |
+GET| posts/create | PostController@create | auth
+POST| posts/create | PostController@edit | auth
+GET| posts/edit | PostController@update | auth
+POST| posts/edit | PostController@store | auth
+POST| posts/delete | PostController@delete | auth
 |
 |
-<span align=center style="color: blue">POST</span> | comments/create | CommentController@store | auth
-<span align=center style="color: blue">POST</span> | comments/delete | CommentController@delete | auth
+POST| comments/create | CommentController@store | auth
+POST| comments/delete | CommentController@delete | auth
 
 ---
 
