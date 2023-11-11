@@ -81,47 +81,22 @@ CREATE TABLE `comments` (
 
 ## Routes
 
-<<<<<<< HEAD
-| Method                                             | Path            | Action                        | Middleware |
-| -------------------------------------------------- | --------------- | ----------------------------- | ---------- |
-| <span align=center style="color: green">GET</span> | /               | PostController@index          |
-| <span align=center style="color: green">GET</span> | register        | AuthController@register       | guest      |
-| <span align=center style="color: blue">POST</span> | register        | AuthController@store          | guest      |
-| <span align=center style="color: green">GET</span> | login           | AuthController@login          | guest      |
-| <span align=center style="color: blue">POST</span> | login           | AuthController@authentication | guest      |
-| <span align=center style="color: blue">POST</span> | logout          | AuthController@logout         | auth       |
-| <span align=center style="color: green">GET</span> | posts/show      | PostController@show           |
-| <span align=center style="color: green">GET</span> | posts/create    | PostController@create         | auth       |
-| <span align=center style="color: blue">POST</span> | posts/create    | PostController@edit           | auth       |
-| <span align=center style="color: green">GET</span> | posts/edit      | PostController@update         | auth       |
-| <span align=center style="color: blue">POST</span> | posts/edit      | PostController@store          | auth       |
-| <span align=center style="color: blue">POST</span> | posts/delete    | PostController@delete         | auth       |
-| <span align=center style="color: blue">POST</span> | comments/create | CommentController@store       | auth       |
-| <span align=center style="color: blue">POST</span> | comments/delete | CommentController@delete      | auth       |
-=======
 | Method                                             | Path | Action               | Middleware |
 | -------------------------------------------------- | ---- | -------------------- | ---------- |
-<span align=center style="color: green">GET</span> | /    | PostController@index |
-|
-|
-<span align=center style="color: green">GET</span> | register | AuthController@register | guest
-<span align=center style="color: blue">POST</span> | register | AuthController@store | guest
-<span align=center style="color: green">GET</span> | login | AuthController@login | guest
-<span align=center style="color: blue">POST</span> | login | AuthController@authentication | guest
-<span align=center style="color: blue">POST</span> | logout | AuthController@logout | auth
-|
-|
-<span align=center style="color: green">GET</span>| posts/show | PostController@show |
-<span align=center style="color: green">GET</span> | posts/create | PostController@create | auth
-<span align=center style="color: blue">POST</span> | posts/create | PostController@edit | auth
-<span align=center style="color: green">GET</span> | posts/edit | PostController@update | auth
-<span align=center style="color: blue">POST</span> | posts/edit | PostController@store | auth
-<span align=center style="color: blue">POST</span> | posts/delete | PostController@delete | auth
-|
-|
-<span align=center style="color: blue">POST</span> | comments/create | CommentController@store | auth
-<span align=center style="color: blue">POST</span> | comments/delete | CommentController@delete | auth
->>>>>>> 921d293eb66f335ff18ac7f0f84efb8b5cd92f77
+GET | /    | PostController@index |
+GET | register | AuthController@register | guest
+post | register | AuthController@store | guest
+GET | login | AuthController@login | guest
+post | login | AuthController@authentication | guest
+post | logout | AuthController@logout | auth
+GET| posts/show | PostController@show |
+GET | posts/create | PostController@create | auth
+post | posts/create | PostController@edit | auth
+GET | posts/edit | PostController@update | auth
+post | posts/edit | PostController@store | auth
+post | posts/delete | PostController@delete | auth
+post | comments/create | CommentController@store | auth
+post | comments/delete | CommentController@delete | auth
 
 ---
 
