@@ -149,14 +149,19 @@ class PostController
     private function validate($title, $body)
     {
 
+        $title = str_replace(array("\r", "\n"), '', $title);
+        $checkBody = str_replace(array("\r", "\n"), '', $body);
 
         $errors = [];
         $send = true;
-        if (empty(trim($title, " "))) {
+        if (empty(trim($title))) {
             $errors["title"] = "حقل العنوان فارغ";
             $send = false;
         }
-        if (empty(trim($body, " "))) {
+
+
+
+        if (empty(trim($checkBody))) {
             $errors["body"] = "نص المقالة فارغ";
             $send = false;
         }

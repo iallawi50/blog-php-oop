@@ -23,6 +23,7 @@ class CommentController
             // check auth
             if (Auth::check()) {
 
+                $body = str_replace(array("\r", "\n"), '', $body);
 
                 if (trim($body, " ")) {
                     Comment::create([
@@ -68,6 +69,5 @@ class CommentController
         }
 
         return back();
-
     }
 }
