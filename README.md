@@ -84,7 +84,6 @@ CREATE TABLE `comments` (
 | Method                                             | Path | Action               | Middleware |
 | -------------------------------------------------- | ---- | -------------------- | ---------- |
 | <span align=center style="color: green">GET</span> | /    | PostController@index |
-
 |
 |
 <span align=center style="color: green">GET</span> | register | AuthController@register | guest
