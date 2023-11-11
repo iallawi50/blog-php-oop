@@ -2,6 +2,8 @@
 
 namespace App\Core;
 
+use App\App;
+
 class Request
 {
 
@@ -10,7 +12,7 @@ class Request
 
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $uri = trim($uri, "/");
-        $uri = str_replace("phpbasics/blog", "", $uri);
+        $uri = str_replace(App::$entries["config"]["app"]["url"], "", $uri);
         $uri = trim($uri, "/");
         // $uri = $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . "/" . $uri;
 
