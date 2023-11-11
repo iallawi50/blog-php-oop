@@ -2,7 +2,7 @@
 
 ## Using PHP OOP
 
-## By : <a href="https://ali-alabdullah.netlify.app">Ali Al-Abdullah</a>
+## By : <a target="_blank" href="https://ali-alabdullah.netlify.app">Ali Al-Abdullah</a>
 
 ---
 
@@ -200,6 +200,6 @@ class Person extends Model
 
 **Thank You For Reading**
 
-<a href="https://ali-alabdullah.netlify.app">Ali Al-Abdullah</a>
+<a  target="_blank" href="https://ali-alabdullah.netlify.app">Ali Al-Abdullah</a>
 
 </div>
