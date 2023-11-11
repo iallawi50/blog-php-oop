@@ -1,7 +1,6 @@
 {
   "require": {
     "symfony/dotenv": "^6.3",
-    "monolog/monolog": "^3.5",
     "nesbot/carbon": "^2.71"
   },
   "autoload": {

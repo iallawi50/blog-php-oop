@@ -8,12 +8,10 @@ class QueryBuilder
 
 {
     public static $pdo;
-    public static $log;
 
-    public static function make(\PDO $pdo, $log)
+    public static function make(\PDO $pdo)
     {
         self::$pdo = $pdo;
-        self::$log = $log;
     }
     public static function select($table, $where = null, $oneColumn = false, $class = null)
     {
@@ -64,7 +62,6 @@ class QueryBuilder
 
     private static function execute($query, $values = [])
     {
-        self::$log->debug($query);
         $statement = self::$pdo->prepare($query);
         $statement->execute($values);
         return $statement;
